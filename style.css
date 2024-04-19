@@ -1,0 +1,53 @@
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    display: flex; /* Use flexbox */
+    justify-content: flex-end; /* Align items to the end (top right) */
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Hide the link that should appear as a dropdown on small screens */
+.topnav a.icon {
+    display: none;
+}
+
+/* Media query for responsive behavior */
+@media screen and (max-width: 600px) {
+    /* Show the dropdown menu when the icon is clicked */
+    .topnav.responsive { /* Update selector */
+        flex-direction: column; /* Change direction to column */
+        align-items: flex-end; /* Align items to the end */
+    }
+
+    .topnav.responsive .icon {
+        display: block;
+    }
+
+    .topnav.responsive a {
+        display: none;
+    }
+
+    .topnav.responsive a.icon {
+        float: right;
+    }
+}
